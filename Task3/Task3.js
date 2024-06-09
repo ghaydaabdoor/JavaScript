@@ -1,10 +1,10 @@
 // Excercise 1
 let div1= document.getElementById('div1')
 div1.onmouseover=function(){
-    div1.innerHTML='Hello World !';
+    div1.innerHTML='Can I help you?';
 }
 div1.onmouseout=function(){
-    div1.innerHTML='Can I help you?'
+    div1.innerHTML='Hello World !'
 }
 
 // Excercise 2
@@ -20,21 +20,30 @@ let country=sel.value;
         FlagImg.src='palestine.jpg';
         FlagImg.alt='Palestine Flag'
     }
+    else if (country === 'Saudi'){
+        FlagImg.src='saudi.jpg';
+        FlagImg.alt='Saudi Flag'
+    }
+    else if (country === 'Iraq'){
+        FlagImg.src='iraq.png';
+        FlagImg.alt='Iraq Flag'
+    }
 }
 
 // Exercise 3
 function FontProperities(){
     let SelectType=document.getElementById('SelectType')
     let TypeValue=SelectType.value;
-    let textbox=document.getElementById('textbox');
     let SelectSize=document.getElementById('SelectSize');
+    let SizeValue=SelectSize.value;
+    let textbox=document.getElementById('textbox');
     let italic=document.getElementById('italic').checked;
     let bold=document.getElementById('bold').checked;
     let underline= document.getElementById('underline').checked;
 
 
     textbox.style.fontFamily= TypeValue;
-    textbox.style.fontSize=SelectSize.value+'px';
+    textbox.style.fontSize=SizeValue+'px';
 
     if(italic){
         textbox.style.fontStyle='italic';
@@ -71,7 +80,7 @@ function ErrorFun(){
     let repass=document.getElementById('repass')
     let ErrorMsg=document.querySelector('.ErrorMsg');
     let ErrorMsg2=document.querySelector('.ErrorMsg2');
-    let sub=document.querySelector('.sub')
+    let subm=document.querySelector('.sub')
     if (pass.value.length < 6){
      ErrorMsg.style.display='inline';
     }
@@ -79,12 +88,24 @@ function ErrorFun(){
         ErrorMsg.style.display='none';
     }
     if(pass.value === repass.value){
-        sub.style.display='inline';
+        subm.style.display='inline';
         ErrorMsg2.style.display='none';
     }
     else{
-        sub.style.display='none';
+        subm.style.display='none';
         ErrorMsg2.style.display='inline'
     }
+}
+
+// Exercise 6 
+// Create a simple playlist application where users can add songs to alist
+let SongName=document.getElementById('SongName')
+let AddSongBtn=document.getElementById('AddSongBtn')
+let Ulist=document.getElementById('Ulist')
+function AddSongFun(){
+    let LiElement=document.createElement('li')
+    let LiText=document.createTextNode(SongName.value)
+    LiElement.appendChild(LiText)
+    Ulist.appendChild(LiElement)
 }
 

@@ -35,12 +35,33 @@
             width:200px;
             height:200px;
         }
+        #div4{
+            cursor: pointer;
+        }
         .ErrorMsg, .ErrorMsg2{
             color:red;
             display: none;
         }
         .sub{
             display: none;
+        }
+        ul{
+            padding: 0px 10px;
+        }
+        #SongName{
+            margin:5px 10px;
+        }
+        #Ulist>li{
+            margin: 0;
+            list-style-type: none;
+            width:95%;
+            height:30px;
+            padding: 10px;
+            background-image: linear-gradient(to bottom,lightgray,rgb(196, 190, 190));
+            border: rgb(182, 173, 173) solid 2px;
+            margin-bottom: 2px;
+            align-content: center;
+            border-radius: 5px;
         }
 
     </style>
@@ -54,6 +75,8 @@
             <option selected disabled>Country</option>
             <option value="Jordan">Jordan</option>
             <option value="Palestine">Palestine</option>
+            <option value="Saudi">Saudi</option>
+            <option value="Iraq">Iraq</option>
         </select>
         <img id="FlagImg" src="no image.webp" alt="no image">
     </div>
@@ -100,6 +123,11 @@
         <input class="sub" type="submit">
         </form>
     </div>
+
+    <input id="SongName" type="text" placeholder="Song name">
+    <button id="AddSongBtn" onclick=AddSongFun()>Add Song</button>
+    <ul id="Ulist">
+    </ul>
 
     <script src="Task3.js"></script>
 </body>
