@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+
+<script>
+// Set a value
+// localStorage.setItem('key','value')
+// localStorage.key='value'
+localStorage.setItem('Name','Ghaydaa')
+localStorage.location='Irbid';
+localStorage.title='Full Stack Developer'
+localStorage.setItem('order',3)
+localStorage.skills=['html','css','JS']
+localStorage.user={
+    name:'ghayda',
+    order:5,
+}
+// delete a value
+// localStorage.removeItem('key')
+// localStorage.removeItem('title')
+
+// get a value
+// localStorage.getItem('key')
+// localStorage.key
+document.write(localStorage.getItem('Name')) 
+console.log(localStorage.getItem('Name'))
+// console.log(localStorage.Name)
+console.log(localStorage.order)
+console.log(localStorage.skills)
+console.log(localStorage.user)
+
+
+
+console.log(typeof localStorage.Name)
+console.log(typeof localStorage.order)
+console.log(typeof localStorage.skills)
+
+
+localStorage.setItem('tel',JSON.stringify(123456))
+localStorage.setItem('PersonalSkills',JSON.stringify(['teamwork','self motivation','JS']))
+localStorage.setItem('colors',JSON.stringify({
+    first:'red',
+    second:'white',
+}))
+
+console.log(localStorage.tel)
+console.log(localStorage.PersonalSkills)
+console.log(localStorage.colors)
+
+// console.log(typeof localStorage.tel)
+// console.log(typeof localStorage.PersonalSkills)
+// console.log(typeof localStorage.colors)
+
+console.log(JSON.parse(localStorage.tel))
+console.log(JSON.parse(localStorage.PersonalSkills))
+console.log(JSON.parse(localStorage.colors))
+
+
+// access the key name through index
+console.log(localStorage.key(0))
+console.log(localStorage.key(1))
+
+// delete everything in local storage
+// localStorage.clear()
+ 
+
+</script>    
+</body>
+</html>

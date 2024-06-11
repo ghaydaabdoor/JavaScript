@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width:300px;
+            display: block;
+            margin:30px 10px 0px 20px;
+        }
+        #sel{
+            margin: 30px 10px 0px 20px;
+        }
+        form div, #sub, #subm {
+            margin: 15px
+        }
+        #form2 label{
+            display: block;
+        }
+        .FnameSpan, .LnameSpan, .bDateSpan, .emailSpan,.ConfemailSpan, .ConfpassSpan, .passSpan{
+            color:red;
+            display: none;
+        }
+        #bDate:invalid{
+            .bDateSpan{
+                display: inline;
+            }
+
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <!-- Exercise 1 -->
+    <div id="sel">
+    <label for="selectAnimal">Animals</label>
+    <select name="animals" id="selectAnimal" onchange="changePic()"> 
+        <option disabled selected>Select an animal</option>
+    </select>
+    </div>
+    
+    <img id="animalPic" src="no image.webp" alt="no image">
+
+
+    <!-- Exercise 2 -->
+     <form id="form1" action="#form">
+        <div><label for="nameX">Name</label>
+        <input type="text" id="nameX" onkeyup="nameFun()"></div>
+
+        <div><label for="age">Age</label>
+        <input type="number" id="age" onkeyup="ageFun()"></div>
+
+        <div><label for="gender">Gender</label>
+        <input type="text" id="gender" onkeyup="genFun()"></div>
+
+        <div><label for="birthdate">Birth Date</label>
+        <input type="date" id="birthdate" onkeyup="birthFun()"></div>
+
+        <div><label for="uimg">Your Image</label>
+        <input type="text" id="uimg" onkeyup="imgFun()"></div>
+
+        <div><label for="desc">Description</label>
+        <input type="text" id="desc" onkeyup="descFun()"></div>
+
+        <div><label for="maj_un">Major and University</label>
+        <input type="text" id="maj_un" onkeyup="majUniFun()"></div>
+
+        <div><span>Programming Language</span>
+        <input name="prog" id="html" type="checkbox" onchange="progLanFun()">
+        <label for="html">HTML</label>
+        <input name="prog" id="css" type="checkbox" onchange="progLanFun()">
+        <label for="css">CSS</label>
+        <input name="prog" id="js" type="checkbox" onchange="progLanFun()">
+        <label for="js">JS</label>
+        </div>
+
+        <div><label for="sib">Siblings number</label>
+        <input type="number" id="sib" onkeyup="sibFun()"></div>
+
+        <div><label for="sibDes">Description of siblings</label>
+        <input type="text" id="sibDes" onkeyup="sibDesFun()"></div>
+
+        <input id="sub" type="submit">
+
+     </form>
+
+
+     <!-- Exercise 3 -->
+     <form id="form2" action="#form">
+        <div><label for="Fname">Enter a Fname</label>
+        <input type="text" id="Fname" onkeyup="FnameErr()">
+        <span class="FnameSpan">Numbers are not allowed</span></div>
+
+        <div><label for="Lname">Enter a Lname</label>
+        <input type="text" id="Lname" onkeyup="LnameErr()">
+        <span class="LnameSpan">Numbers are not allowed</span></div>
+
+
+        <div><label for="bDate">Enter a Bdate</label>
+        <input type="date" id="bDate">
+        <span class="bDateSpan">The format should be mm/dd/yy</span></div>
+
+
+        <div><label for="emaill">Enter an email</label>
+        <input type="email" id="email" onkeyup="emailErr()">
+        <span class="emailSpan">The email is not valid</span></div>
+
+
+        <div><label for="confEmaill">Confirm email</label>
+        <input type="email" id="confEmaill" onkeyup="ConfemailErr()">
+        <span class="ConfemailSpan">The email is not valid</span></div>
+
+
+        <div><label for="pass">Password</label>
+        <input type="password" id="pass" onkeyup="passErr()">
+        <span class="passSpan">"Password must be at least 8 characters long, include at least one uppercase letter, one lowercase letter, and one digit."
+        </span></div>
+
+
+        <div><label for="confPass">Confirm password</label>
+        <input type="password" id="confPass" onkeyup="ConfpassErr()">
+        <span class="ConfpassSpan">"Password must be at least 8 characters long, include at least one uppercase letter, one lowercase letter, and one digit."
+        </span></div>
+
+        <input id="subm" type="submit">
+
+     </form>
+
+    <script src="task4.js"></script>
+
+</body>
+</html>
